@@ -1,0 +1,7 @@
+<%= link_to "Add a Pokemon", new_pokemon_path %>
+
+<ul class="pokemons">
+  <% @pokemons.each do |pokemon| %>
+    <li><%= pokemon.name %></li>
+  <% end %>
+</ul>

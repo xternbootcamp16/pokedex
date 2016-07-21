@@ -1,0 +1,7 @@
+<%= form_for @pokemon do |f| %>
+  <p>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </p>
+  <%= f.submit "Add Pokemon" %>
+<% end %>
