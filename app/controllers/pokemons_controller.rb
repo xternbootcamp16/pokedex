@@ -1,4 +1,6 @@
 class PokemonsController < ApplicationController
+  before_action :authenticate
+
   def index
     @pokemons = Pokemon.all
   end
