@@ -2,7 +2,7 @@ require "rails_helper"
 
 feature "User adds a Pokemon" do
   scenario "successfully" do
-    visit root_path
+    sign_in
     click_on "Add a new Pokemon"
     fill_in "Name", with: "Jigglypuff"
     click_on "Add Pokemon"
