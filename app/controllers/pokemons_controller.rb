@@ -2,7 +2,7 @@ class PokemonsController < ApplicationController
   before_action :authenticate
 
   def index
-    @pokemons = Pokemon.all
+    @pokemons = Pokemon.where(email: session[:current_email])
   end
 
   def new
@@ -11,6 +11,7 @@ class PokemonsController < ApplicationController
 
   def create
     pokemon = Pokemon.new pokemon_params
+    pokemon.email = session[:current_email]
     pokemon.save
     redirect_to root_path
   end
