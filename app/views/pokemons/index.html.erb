@@ -1,1 +1,9 @@
 <h2>Let Me Show You Them</h2>
+
+<%= link_to "Add a new Pokemon", new_pokemon_path %>
+
+<ul class="pokemons">
+  <% @pokemons.each do |pokemon| %>
+    <li><%= pokemon.name %></li>
+  <% end %>
+</ul>
